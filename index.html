@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Learning Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎨 CSS Learning Playground</h1>
+    <p>Learn CSS by interacting with live examples</p>
+</header>
+
+<nav>
+    <button onclick="showSection('selectors')">Selectors</button>
+    <button onclick="showSection('colors')">Colors & Fonts</button>
+    <button onclick="showSection('boxmodel')">Box Model</button>
+    <button onclick="showSection('display')">Display</button>
+    <button onclick="showSection('flex')">Flexbox</button>
+    <button onclick="showSection('grid')">Grid</button>
+</nav>
+
+<main>
+
+    <!-- SELECTORS -->
+    <section id="selectors" class="content-section">
+
+        <h2>1. CSS Selectors</h2>
+
+        <p>
+            Element Selector
+        </p>
+
+        <p class="highlight">
+            Class Selector
+        </p>
+
+        <p id="special">
+            ID Selector
+        </p>
+
+        <div class="code-box">
+            Element → targets all p tags<br>
+            Class → targets .highlight<br>
+            ID → targets #special
+        </div>
+
+    </section>
+
+    <!-- COLORS -->
+    <section id="colors" class="content-section hidden">
+
+        <h2>2. Colors, Fonts & Backgrounds</h2>
+
+        <div class="controls">
+
+            <label>Text Color</label>
+            <input type="color" id="textColor">
+
+            <label>Background</label>
+            <input type="color" id="bgColor">
+
+            <label>Font Size</label>
+            <input type="range" min="16" max="50" value="24" id="fontSize">
+
+        </div>
+
+        <div class="playground" id="styleDemo">
+            Change my style!
+        </div>
+
+    </section>
+
+    <!-- BOX MODEL -->
+    <section id="boxmodel" class="content-section hidden">
+
+        <h2>3. Box Model</h2>
+
+        <div class="margin-box">
+
+            Margin
+
+            <div class="border-box">
+
+                Border
+
+                <div class="padding-box">
+
+                    Padding
+
+                    <div class="content-box">
+                        Content
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DISPLAY -->
+    <section id="display" class="content-section hidden">
+
+        <h2>4. Display Property</h2>
+
+        <select id="displaySelector">
+            <option value="block">block</option>
+            <option value="inline">inline</option>
+            <option value="inline-block">inline-block</option>
+            <option value="none">none</option>
+        </select>
+
+        <div id="displayDemo">
+            I change my display property
+        </div>
+
+    </section>
+
+    <!-- FLEX -->
+    <section id="flex" class="content-section hidden">
+
+        <h2>5. Flexbox</h2>
+
+        <button onclick="rowLayout()">Row</button>
+        <button onclick="columnLayout()">Column</button>
+
+        <div class="flex-container" id="flexContainer">
+
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+
+        </div>
+
+    </section>
+
+    <!-- GRID -->
+    <section id="grid" class="content-section hidden">
+
+        <h2>6. CSS Grid</h2>
+
+        <button onclick="twoColumns()">2 Columns</button>
+        <button onclick="threeColumns()">3 Columns</button>
+
+        <div class="grid-container" id="gridContainer">
+
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
